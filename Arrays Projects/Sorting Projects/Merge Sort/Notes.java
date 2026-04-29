@@ -1,20 +1,16 @@
-/*Given an array arr[], its starting position l and its ending position r. Sort the array using the merge sort algorithm.
-
-Examples:
-
-Input: arr[] = [4, 1, 3, 9, 7]
-Output: [1, 3, 4, 7, 9]
-Explanation: We get the sorted array after using merge sort
-Input: arr[] = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-Explanation: We get the sorted array after using merge sort 
-Constraints:
-1 ≤ arr.size() ≤ 10 */
-public class Pro_01{
+public class Notes{ 
     public static void main(String[] args) {
+        // Merge sort is a technique where:
+        /*
+        1. Make two arrays of size n/2 each and copy paste elements to them
+        2. Then merge the two when size is 1
+        */
+        int [] arr = {5,4,3,2,1};
+        mergesort(arr);
+        for(int ele:arr) System.out.print(ele + " ");
     }
-    void mergeSort(int arr[], int l, int r) {
-        // code here
+    private static void mergesort(int[] arr) {
+        // Step 1 -> Create two empty arrays of n/2 and n-n/2
         int n = arr.length;
         if(n == 1) return;
         int[] a = new int[n/2]; // make arr n/2
@@ -24,8 +20,8 @@ public class Pro_01{
         for(int i = 0;i < a.length;i++) a[i] = arr[idx++];
         for(int i = 0;i < b.length;i++) b[i] = arr[idx++];
         // Step -> Magic
-        mergeSort(a,l,r);
-        mergeSort(b,l,r);
+        mergesort(a);
+        mergesort(b);
         // Step 4 -> Merge a and b into arr
         merge(a,b,arr);
     }

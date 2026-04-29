@@ -28,6 +28,22 @@ public class Pro_27{
     public static void main(String[] args) {
     }
     public String countAndSay(int n) {
-        return "";
+        if(n==1) return "1";
+        String s = countAndSay(n-1);
+        String ans = "";
+        int i = 0;
+        int j = 0;
+        while(j < s.length()){
+            if(s.charAt(i) == s.charAt(j)) j++;
+            else {
+                int freq = j-i;
+                ans += freq;
+                ans += s.charAt(i);
+                i = j;
+            }
+        }
+        ans += j-i;
+        ans += s.charAt(i);
+        return ans;
     }
 }
