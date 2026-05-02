@@ -85,7 +85,8 @@ public class Notes{
         // String s1 = "Raghav";
         // String s2 = "Raghav";
         // System.out.println(s1 == s2);
-        // String s3 = "Raghav";
+        String s3 = "Raghav";
+        System.out.println(s3);
         // String s4 = new String("Raghav");
         // System.out.println(s3 == s4);
         // String s5 = "Swarit";

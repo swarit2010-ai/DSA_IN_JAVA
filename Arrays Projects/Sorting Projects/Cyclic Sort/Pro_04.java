@@ -36,6 +36,25 @@ public class Pro_04{
     public static void main(String[] args) {
     }
     public int findDuplicate(int[] nums) {
-        return 0;
+        // boolean flag[] = new boolean[nums.length];
+        // for(int i = 0;i < nums.length;i++){
+        //     if(flag[nums[i]]) return nums[i];
+        //     else flag[nums[i]] = true;
+        // }
+        // return -1;
+        int i = 0;
+        while(i < nums.length){
+            int idx = nums[i]-1;
+            if(i == idx) i++;
+            else{
+                if(nums[i] == nums[idx]) return nums[i];
+                else{
+                    int temp = nums[idx];
+                    nums[idx] = nums[i];
+                    nums[i] = temp;
+                }
+            }
+        }
+        return -1;
     }
 }

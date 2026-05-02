@@ -20,6 +20,13 @@ public class Pro_21{
     public static void main(String[] args) {
     }
     public void reverseArray(int arr[]) {
-        
+        reverse(arr,0,arr.length-1);
+    }
+    public void reverse(int[]arr,int i,int j){
+        if(i >= j) return;
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        reverse(arr,i+1,j-1);
     }
 }

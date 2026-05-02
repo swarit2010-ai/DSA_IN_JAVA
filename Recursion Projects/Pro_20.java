@@ -21,6 +21,18 @@ public class Pro_20{
     public static void main(String[] args) {
     }
     public int firstSearch(int[] arr, int k) {
-        return 0;
+        // Code Here
+        return search(arr,k,0,arr.length-1);
+    }
+    public int search(int[]arr,int k,int i,int j){
+        if(i > j) return -1;
+        int mid = (i+j)/2;
+        if(arr[mid] == k){
+            if(mid > 0 && arr[mid-1] == k) return search(arr,k,i,mid-1);
+            else return mid;
+        }
+        else if(arr[mid] > k) return search(arr,k,i,mid-1);
+        else return search(arr,k,mid+1,j);
+        
     }
 }
