@@ -26,6 +26,23 @@ public class Pro_07{
     }
     public int[] findErrorNums(int[] nums) {
         int[] ans = new int[2];
+        int i = 0;
+        while(i < nums.length){
+            int idx = nums[i]-1;
+            if(i != idx && nums[i] == nums[idx]) {
+                ans[0] = nums[i];
+                i++;
+            }
+            else if(nums[i] == i+1) i++;
+            else {
+                int temp = nums[idx];
+                nums[idx] = nums[i];
+                nums[i] = temp;
+            }
+        }
+        for(i = 0;i < nums.length;i++){
+            if(nums[i] != i+1) ans[1] = i+1;
+        }
         return ans;
     }
 }

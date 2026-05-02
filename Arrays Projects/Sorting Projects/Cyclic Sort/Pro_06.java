@@ -29,6 +29,19 @@ public class Pro_06{
     }
     public List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> ans = new ArrayList<>();
+        int i = 0;
+        while(i < nums.length){
+            int idx = nums[i]-1;
+            if(nums[i] == i+1 || nums[i] == nums[idx]) i++;
+            else {
+                int temp = nums[idx];
+                nums[idx] = nums[i];
+                nums[i] = temp;
+            }
+        }
+        for(i = 0;i < nums.length;i++){
+            if(nums[i] != i+1) ans.add(i+1);
+        }
         return ans;
     }
 }

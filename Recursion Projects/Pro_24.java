@@ -20,6 +20,16 @@ public class Pro_24{
     }
     public ArrayList<Integer> subsetSums(int[] arr) {
         // code here
-        
+        ArrayList<Integer> ans = new ArrayList<>();
+        sum(arr,0,0,ans);
+        return ans;
+    }
+    public void sum(int[] arr,int i,int sum,ArrayList<Integer> ans){
+        if(i == arr.length){
+            ans.add(sum);
+            return;
+        }
+        sum(arr,i+1,sum+arr[i],ans);
+        sum(arr,i+1,sum,ans);
     }
 }
