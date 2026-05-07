@@ -20,6 +20,7 @@ public class Pro_23{
     public static void main(String[] args) {
     }
     public List<String> generateParenthesis(int n) {
-        
+        List<String> ans = new ArrayList<>();
+        return ans;
     }
 }
