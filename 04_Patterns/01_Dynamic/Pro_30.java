@@ -4,12 +4,12 @@ public class Pro_30{
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the height");
         int s = sc.nextInt();
-        int stars = 4;
+        int stars = 10;
         int spaces = 1;
-        for(int x = 1;x <= s*2-1;x++){
-            System.out.print("* ");
-        }
-        System.out.println();
+        // for(int x = 1;x <= s*2-1;x++){
+        //     System.out.print("* ");
+        // }
+        // System.out.println();
         for(int i = 1;i <= s-1;i++){
             for(int a = 1;a <= stars;a++){
                 System.out.print("* ");
