@@ -4,9 +4,9 @@ public class Pro_01{
         int n = 5;
         print(n);
     }
-    public static void print(int i){
-        if(i == 0) return;
+    public static void print(int i) {
+        if (i == 0) return;
         System.out.println(i);
-        print(i-1);
+        print(i - 1);
     }
 }
