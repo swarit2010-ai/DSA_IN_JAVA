@@ -1,0 +1,37 @@
+package OOPS;
+class Fract{
+    int num;
+    int den;
+    Fract(int num,int den){
+        this.num = num;
+        this.den = den;
+    }
+
+    void print() {
+        System.out.println(num+"/"+den);
+    }
+    void add(Fract f) {
+        num = num * f.den + den * f.num;
+        den *= f.den;
+    }
+    void multiply(Fract f){
+        num *= f.num;
+        den *= f.den;
+    }
+    public void divide(Fract f) {
+        num *= f.den;
+        den *= f.num;
+    }
+}
+public class Fraction {
+    public static void main(String[] args) {
+        Fract f1 = new Fract(3,7);
+        f1.print();
+        Fract f2 = new Fract(7,3);
+        f2.print();
+//        f1.add(f2);
+//        f1.multiply(f2);
+        f1.divide(f2);
+        f1.print();
+    }
+}
