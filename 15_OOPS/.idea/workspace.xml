@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b9a6138-5e22-4b49-b411-b899eb228a2e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/OOPS/Inheritance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOPS/Inheritance2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOPS/OwnArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOPS/Fraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOPS/Fraction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +57,17 @@
     "Application.Fraction (4).executor": "Run",
     "Application.Fraction (5).executor": "Run",
     "Application.Fraction.executor": "Run",
+    "Application.Inheritance (1).executor": "Run",
+    "Application.Inheritance.executor": "Run",
     "Application.Marks (1).executor": "Run",
     "Application.Marks.executor": "Run",
     "Application.MethodOverloading.executor": "Run",
+    "Application.OwnArrayList (1).executor": "Run",
+    "Application.OwnArrayList (2).executor": "Run",
+    "Application.OwnArrayList (3).executor": "Run",
+    "Application.OwnArrayList (4).executor": "Run",
+    "Application.OwnArrayList (5).executor": "Run",
+    "Application.OwnArrayList.executor": "Run",
     "Application.PassingClassesToMethods.executor": "Run",
     "Application.Polymorphism.executor": "Run",
     "Application.PrivateKeyboard.executor": "Run",
@@ -80,12 +90,12 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "E:/Java/Java Projects/15_OOPS/src/Main.java",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "advanced.settings"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Fraction">
-    <configuration name="Fraction (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="OOPS.Fraction" />
+  <component name="RunManager" selected="Application.OwnArrayList">
+    <configuration name="OwnArrayList (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OOPS.OwnArrayList" />
       <module name="15_OOPS" />
       <extension name="coverage">
         <pattern>
@@ -97,8 +107,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Fraction (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="OOPS.Fraction" />
+    <configuration name="OwnArrayList (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OOPS.OwnArrayList" />
       <module name="15_OOPS" />
       <extension name="coverage">
         <pattern>
@@ -110,8 +120,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Fraction (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="OOPS.Fraction" />
+    <configuration name="OwnArrayList (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OOPS.OwnArrayList" />
       <module name="15_OOPS" />
       <extension name="coverage">
         <pattern>
@@ -123,8 +133,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Fraction (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="OOPS.Fraction" />
+    <configuration name="OwnArrayList (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OOPS.OwnArrayList" />
       <module name="15_OOPS" />
       <extension name="coverage">
         <pattern>
@@ -136,8 +146,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Fraction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="OOPS.Fraction" />
+    <configuration name="OwnArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OOPS.OwnArrayList" />
       <module name="15_OOPS" />
       <extension name="coverage">
         <pattern>
@@ -151,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Fraction" />
-        <item itemvalue="Application.Fraction (3)" />
-        <item itemvalue="Application.Fraction (2)" />
-        <item itemvalue="Application.Fraction (1)" />
-        <item itemvalue="Application.Fraction (5)" />
+        <item itemvalue="Application.OwnArrayList" />
+        <item itemvalue="Application.OwnArrayList (1)" />
+        <item itemvalue="Application.OwnArrayList (5)" />
+        <item itemvalue="Application.OwnArrayList (4)" />
+        <item itemvalue="Application.OwnArrayList (3)" />
       </list>
     </recent_temporary>
   </component>
