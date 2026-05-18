@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b9a6138-5e22-4b49-b411-b899eb228a2e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/OOPS/ComplexNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OOPS/Fraction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOPS/Fraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOPS/Fraction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +50,10 @@
     "Application.FinalAndStatic (3).executor": "Run",
     "Application.FinalAndStatic.executor": "Run",
     "Application.Fraction (1).executor": "Run",
+    "Application.Fraction (2).executor": "Run",
+    "Application.Fraction (3).executor": "Run",
+    "Application.Fraction (4).executor": "Run",
+    "Application.Fraction (5).executor": "Run",
     "Application.Fraction.executor": "Run",
     "Application.Marks (1).executor": "Run",
     "Application.Marks.executor": "Run",
@@ -80,7 +83,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Fraction (4)">
+  <component name="RunManager" selected="Application.Fraction">
     <configuration name="Fraction (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="OOPS.Fraction" />
       <module name="15_OOPS" />
@@ -120,7 +123,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Fraction (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Fraction (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="OOPS.Fraction" />
       <module name="15_OOPS" />
       <extension name="coverage">
@@ -148,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Fraction (4)" />
-        <item itemvalue="Application.Fraction (3)" />
         <item itemvalue="Application.Fraction" />
+        <item itemvalue="Application.Fraction (3)" />
         <item itemvalue="Application.Fraction (2)" />
         <item itemvalue="Application.Fraction (1)" />
+        <item itemvalue="Application.Fraction (5)" />
       </list>
     </recent_temporary>
   </component>
