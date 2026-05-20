@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b9a6138-5e22-4b49-b411-b899eb228a2e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/OOPS/Inheritance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OOPS/Inheritance2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OOPS/OwnArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7b9a6138-5e22-4b49-b411-b899eb228a2e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
