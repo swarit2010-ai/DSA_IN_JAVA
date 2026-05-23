@@ -1,5 +1,7 @@
 import java.util.*;
-/* You are given the head of a singly linked list. Return an array containing the values of the nodes.
+/* Print Linked List
+Difficulty: BasicAccuracy: 60.71%Submissions: 186K+Points: 1
+You are given the head of a singly linked list. Return an array containing the values of the nodes.
 
 Examples:
 
