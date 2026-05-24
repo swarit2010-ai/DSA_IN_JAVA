@@ -50,6 +50,39 @@ class Linkedlist{
         head = head.next;
         size--;
     }
+    void delete(int idx) {
+        if(idx < 0 || idx >= size) System.out.println("Index out of bound");
+        else if(idx == 0) deleteAtHead();
+        else{
+            Node temp = head;
+            for(int i = 1;i <= idx-1;i++) temp = temp.next;
+            temp.next = temp.next.next;
+            if(idx == size-1) tail = temp;
+            size--;
+        }
+    }
+    void insert(int idx,int val){
+        if(idx > size || head == null || idx < 0){
+            System.out.println("Index out of bound.");
+        }
+        else if(idx == size) addAtTail(val);
+        else if(idx == 0) addAtHead(val);
+        else{
+            Node temp = head;
+            Node temp1 = new Node(val);
+            for(int i = 1;i < idx;i++) temp = temp.next;
+            temp1.next = temp.next;
+            temp.next = temp1;
+            size++;
+        }
+    }
+    int get(int idx) {
+        Node temp = head;
+        for(int i = 0;i < idx;i++){
+            temp = temp.next;
+        }
+        return temp.val;
+    }
 }
 
 public class LinkedListDataStructure{
@@ -57,19 +90,23 @@ public class LinkedListDataStructure{
         Linkedlist ll = new Linkedlist();
         ll.addAtTail(10); ll.addAtTail(20);
         ll.addAtTail(30); ll.addAtTail(40);
-        // ll.display();
-        // System.out.println(ll.size);
-        // ll.addAtHead(50);
-        // ll.display();
-        // ll.deleteAtHead();
-        // ll.deleteAtHead();
-        // ll.deleteAtHead();
-        // ll.deleteAtHead();
-        // ll.deleteAtHead();
-        // ll.addAtTail(10); ll.addAtTail(20);
-        // ll.addAtTail(30); ll.addAtTail(40);
-        // System.out.println(ll.search(40));
-        // ll.display();
-        
+        ll.display();
+        System.out.println(ll.size);
+        ll.addAtHead(50);
+        ll.display();
+        ll.deleteAtHead();
+        ll.deleteAtHead();
+        ll.deleteAtHead();
+        ll.deleteAtHead();
+        ll.deleteAtHead();
+        ll.addAtTail(10); ll.addAtTail(20);
+        ll.addAtTail(30); ll.addAtTail(40);
+        System.out.println(ll.search(40));
+        ll.display();
+        ll.insert(0, 15);
+        ll.display();
+        System.out.println(ll.get(0));
+        ll.delete(2);
+        ll.display();
     }
 }
