@@ -22,6 +22,14 @@ public class Pro_02{
     }
     public Node insertAtEnd(Node head, int x) {
         // code here
+        Node last = new Node(x);
+        if(head == null) return last;
+        Node temp = head;
+        if(head.next != null) {
+            while(temp.next != null) temp = temp.next;
+        }
+        temp.next = last;
+        last.next = null;
         return head;
     }
 }

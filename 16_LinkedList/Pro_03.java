@@ -20,6 +20,12 @@ public class Pro_03{
     }
     public int getCount(Node head) {
         // code here
-        return 0;
+        Node temp = head;
+        int size = 0;
+        while(temp != null){
+            size++;
+            temp = temp.next;
+        }
+        return size;
     }
 }

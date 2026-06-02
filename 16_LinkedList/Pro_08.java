@@ -26,8 +26,16 @@ public class Pro_08{
     public static void main(String[] args) {
     }
     Node deleteMid(Node head) {
-        // This is method only submission.
-        // You only need to complete the method.
-        return null;
+        if(head == null || head.next == null) return null;
+        Node slow = head;
+        Node fast = head;
+        Node prev = null;
+        while(fast != null && fast.next != null){
+            prev = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        prev.next = slow.next;
+        return head;
     }
 }

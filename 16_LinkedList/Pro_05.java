@@ -20,6 +20,12 @@ public class Pro_05{
     }
     public boolean isEven(Node head) {
         // code here
-        return false;
+        Node temp = head;
+        int size = 0;
+        while(temp != null){
+            size++;
+            temp = temp.next;
+        }
+        return (size % 2 == 0);
     }
 }
