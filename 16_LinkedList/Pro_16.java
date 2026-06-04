@@ -27,5 +27,21 @@ The list is guaranteed to be sorted in ascending order.*/
 public class Pro_16{
     public static void main(String[] args) {
     }
-
+    public Node deleteDuplicates(Node head) {
+        Node d1 = head;
+        Node d2 = head;
+        Node t1 = new Node(-1);
+        Node t = t1;
+        while(d2 != null){
+            while(d2 != null && d1.val == d2.val  ) d2 = d2.next;
+            if(d1.next == d2) {
+                t.next = d1;
+                t = t.next;
+            }
+            else if(d2 == null) t.next = null;
+            d1.next = d2;
+            d1 = d1.next;
+        }
+        return t1.next;
+    }
 }

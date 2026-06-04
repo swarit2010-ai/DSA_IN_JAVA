@@ -35,5 +35,17 @@ Follow up: Could you do this in one pass? */
 public class Pro_10{
     public static void main(String[] args) {
     }
-    
+    public Node removeNthFromEnd(Node head, int n) {
+        if(head.next == null && n == 1) return null;
+        Node slow = head;
+        Node fast = head;
+        for(int i = 1;i <= n && fast != null;i++) fast = fast.next;
+        if(fast == null) return head.next;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next;
+        }
+        slow.next = slow.next.next;
+        return head;
+    }
 }

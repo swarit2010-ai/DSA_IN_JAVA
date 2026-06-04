@@ -29,5 +29,20 @@ The number of nodes in the list is n.
 public class Pro_11{
     public static void main(String[] args) {
     }
-    
+    public Node swapNodes(Node head, int n) {
+        Node slow = head;
+        Node fast = head;
+        for(int i = 1;i <= n && fast != null;i++) fast = fast.next;
+        while(fast != null){
+            slow = slow.next;
+            fast = fast.next;
+        }
+        int a = slow.val;
+        Node temp = head;
+        for(int i = 1;i < n;i++) temp = temp.next;
+        int b = temp.val;
+        temp.val = a;
+        slow.val = b;
+        return head;
+    }
 }

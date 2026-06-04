@@ -25,6 +25,25 @@ public class Pro_17{
     public static void main(String[] args) {
     }
     public Node rotate(Node head, int k) {
-        return head;
+        int size = 0;
+        Node temp = head;
+        while(temp != null) {
+            size++;
+            temp = temp.next;
+        }
+        if(k % size == 0) return head;
+        k = k % size;
+        temp = head;
+        Node temp2 = head;
+        int i = 1;
+        while(temp.next != null){
+            temp = temp.next;
+            if(i == k-1) temp2 = temp;
+            i++;
+        }
+        Node ans = temp2.next;
+        temp.next = head;
+        temp2.next = null;
+        return ans;
     }
 }
