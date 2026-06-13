@@ -28,6 +28,31 @@ public class Pro_18{
     public static void main(String[] args) {
     }
     public Node rotateRight(Node head, int k) {
+        Node temp = head;
+        int size = 0;
+        while(temp != null){
+            size++;
+            temp = temp.next;
+        }
+        if(size == 0 || k % size == 0) return head;
+        k = k % size;
+        k = k+1;
+        Node slow = head;
+        Node fast = head;
+        Node last = null;
+        for(int i = 1;i <= k && fast != null;i++) {
+            if(fast.next == null) last = fast;
+            fast = fast.next;
+        }
+        
+        while(fast != null){
+            if(fast.next == null) last = fast;
+            fast = fast.next;
+            slow = slow.next;
+        }
+        last.next = head;
+        head = slow.next;
+        slow.next = null;
         return head;
     }
 }

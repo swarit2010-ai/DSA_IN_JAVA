@@ -83,6 +83,31 @@ class Linkedlist{
         }
         return temp.val;
     }
+    int firstIndexOf(int val){
+        Node temp = head;
+        int idx = 0;
+        while(temp != null){
+            if(temp.val == val){
+                return idx;
+            }
+            idx++;
+            temp = temp.next;
+        }
+        return -1;
+    }
+    int lastIndexOf(int val){
+        Node temp = head;
+        int idx = 0;
+        int ans = -1;
+        while(temp != null){
+            if(temp.val == val){
+                ans = idx;
+            }
+            idx++;
+            temp = temp.next;
+        }
+        return ans;
+    }
 }
 
 public class LinkedListDataStructure{
@@ -108,5 +133,10 @@ public class LinkedListDataStructure{
         System.out.println(ll.get(0));
         ll.delete(2);
         ll.display();
+        ll.addAtHead(15);
+        System.out.println(ll.firstIndexOf(15));
+        ll.addAtTail(15);
+        ll.display();
+        System.out.println(ll.lastIndexOf(15));
     }
 }
