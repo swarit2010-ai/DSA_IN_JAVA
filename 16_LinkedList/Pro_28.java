@@ -16,4 +16,15 @@ Constraints:
 public class Pro_28{
     public static void main(String[] args) {
     }
+    public static int getLength(Node head) {
+        // code here
+        if(head == null) return 0;
+        Node temp = head.next;
+        int size = 1;
+        while(temp != head){
+            size++;
+            temp = temp.next;
+        }
+        return size;
+    }
 }

@@ -22,4 +22,16 @@ Constraints:
 public class Pro_27{
     public static void main(String[] args) {
     }
+    public int modularNode(Node head, int k) {
+        // code here
+        int ans = -1;
+        Node temp = head;
+        int idx = 1;
+        while(temp != null){
+            if(idx % k == 0) ans = temp.val;
+            temp = temp.next;
+            idx++;
+        }
+        return ans;
+    }
 }

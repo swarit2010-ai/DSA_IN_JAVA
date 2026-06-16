@@ -18,4 +18,20 @@ Constraints:
 public class Pro_26{
     public static void main(String[] args) {
     }
+    public Node insertInMiddle(Node head, int x) {
+        // code here
+        Node add = new Node(x);
+        if(head == null) return add;
+        Node slow = head;
+        Node fast = head;
+        while(fast.next != null && fast.next.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        
+        add.next = slow.next;
+        slow.next = add;
+        
+        return head;
+    }
 }   

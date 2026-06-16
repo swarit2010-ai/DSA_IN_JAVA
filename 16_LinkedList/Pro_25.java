@@ -32,5 +32,27 @@ The number of nodes in the linked list is in the range [0, 104].
 public class Pro_25{
     public static void main(String[] args) {
     }
-    
+    public Node oddEvenList(Node head) {
+        Node odd = new Node(-1);
+        Node even = new Node(-1);
+        Node t1 = odd;
+        Node t2 = even;
+        Node temp = head;
+        int idx = 1;
+        while(temp != null){
+            if(idx % 2 == 1){
+                t1.next = temp;
+                t1 = t1.next;
+            }
+            else{
+                t2.next = temp;
+                t2 = t2.next;
+            }
+            temp = temp.next;
+            idx++;
+        }
+        t1.next = even.next;
+        t2.next = null;
+        return odd.next;
+    }
 }
