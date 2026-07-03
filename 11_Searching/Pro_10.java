@@ -26,7 +26,34 @@ Leetcode 441
 public class Pro_10{
     public static void main(String[] args) {
     }
+    // public int arrangeCoins(int n) {
+    //     long m = n;
+    //     long k = (sqrt(8*m+1) -1)/2;
+    //     return (int)k;
+    // }
+    // public long sqrt(long x) {
+    //     long low = 0,high = x,mid;
+    //     if(x == 0 || x == 1) return x;
+    //     while(low <= high){
+    //         mid = low + (high-low)/2;
+    //         if(mid == x/mid) return mid;
+    //         else if(mid  > x/mid) high = mid-1;
+    //         else low = mid+1;
+    //     }
+    //     return high;
+    // }
     public int arrangeCoins(int n) {
-        return 0;
+        long low = 0,high = n,ans = 0;
+        while(low <= high){
+            long mid = low + (high-low)/2;
+            long k = mid*(mid+1)/2;
+            if(k == n) return (int)mid;
+            else if(k > n) high = mid-1;
+            else{
+                ans = mid;
+                low = mid+1;
+            }
+        }
+        return (int)ans;
     }
 }
