@@ -23,8 +23,26 @@ Constraints:
 
 1 <= n <= 8
 */
+import java.util.*;
+import java.util.List;
 public class Pro_23{
     public static void main(String[] args) {
     }
-    
+    public List<String> generateParenthesis(int n) {
+        List<String> ans = new ArrayList<>();
+        generate(ans,n,0,0,"");
+        return ans;
+    }
+    public void generate(List<String> ans,int n,int l,int r,String s){
+        if(s.length() == 2*n){
+            ans.add(s);
+            return;
+        }
+        if(l < n){
+            generate(ans,n,l+1,r,s+'(');
+        }
+        if(r < l){
+            generate(ans,n,l,r+1,s+')');
+        }
+    }
 }
