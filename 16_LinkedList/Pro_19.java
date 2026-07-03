@@ -39,5 +39,41 @@ The number of nodes in the list is in the range [1, m * n].
 public class Pro_19{
     public static void main(String[] args) {
     }
-    
+    public int[][] spiralMatrix(int m, int n, Node head) {
+        int[][] arr = new int[m][n];
+        for (int[] arr1 : arr) {
+            for (int j = 0; j < arr1.length; j++) {
+                arr1[j] = -1;
+            }
+        }
+        Node temp = head;
+        int top = 0,bottom = m-1,left = 0,right = n-1;
+        while(temp != null){
+            for(int i = left;i <= right && temp != null;i++) {
+                arr[top][i] = temp.val;
+                temp = temp.next;
+            }
+            top++;
+            for(int i = top;i <= bottom && temp != null;i++){
+                arr[i][right] = temp.val;
+                temp = temp.next;
+            }
+            right--;
+            if(top <= bottom) {
+                for(int i = right;i >= left && temp != null;i--){
+                    arr[bottom][i] = temp.val;
+                    temp = temp.next;
+                }
+                bottom--;
+            }
+            if(left <= right){
+                for(int i = bottom;i >= top && temp != null;i--){
+                    arr[i][left] = temp.val;
+                    temp = temp.next;
+                }
+                left++;
+            }
+        }
+        return arr;
+    }
 }
