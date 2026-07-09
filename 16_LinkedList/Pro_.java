@@ -19,17 +19,7 @@ Explanation: As shown in figure this is not a circular linked list.
 Constraints:
 1 <= number of nodes <= 100
 1 <= node -> data <= 104 */
-public class Pro_36{
+public class Pro_{
     public static void main(String[] args) {
-    }
-    boolean isCircular(Node head) {
-        // code here
-        if(head.next == head) return true;
-        Node temp = head.next;
-        while(temp != null){
-            if(temp == head) return true;
-            temp = temp.next;
-        }
-        return false;
     }
 }
