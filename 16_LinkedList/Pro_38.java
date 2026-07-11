@@ -20,36 +20,73 @@ Constraints:
 1 ≤ data of nodes ≤ 109
 */
 
-import java.util.ArrayList;
-
 public class Pro_38{
     public static void main(String[] args) {
     }
+    // Node reverseBetween(int a, int b, Node head) {
+    //     // code here
+    //     ArrayList<Node> list = new ArrayList<>();
+    //     Node temp = head;
+    //     while(temp != null){
+    //         list.add(temp);
+    //         temp = temp.next;    
+    //     }
+    //     reverse(a-1,b-1,list);
+    //     Node ans = new Node(-1);
+    //     temp = ans;
+    //     for(int i = 0;i < list.size();i++){
+    //         temp.next = list.get(i);
+    //         temp = temp.next;
+    //     }
+    //     temp.next = null;
+    //     return ans.next;
+    // }
+    // void reverse(int i,int j,ArrayList<Node> list){
+    //     while(i < j){
+    //         Node temp = list.get(i);
+    //         list.set(i,list.get(j));
+    //         list.set(j,temp);
+    //         i++;
+    //         j--;
+    //     }
+    // }
     Node reverseBetween(int a, int b, Node head) {
         // code here
-        ArrayList<Node> list = new ArrayList<>();
+        int i = 1;
         Node temp = head;
+        Node first = head;
+        Node last = null;
+        Node reverse_head = null;
+        Node reverse_tail = null;
         while(temp != null){
-            list.add(temp);
-            temp = temp.next;    
-        }
-        reverse(a-1,b-1,list);
-        Node ans = new Node(-1);
-        temp = ans;
-        for(int i = 0;i < list.size();i++){
-            temp.next = list.get(i);
+            if(i == a-1) first = temp;
+            if(i == b+1) last = temp;
+            if(i == a) reverse_head = temp;
+            if(i == b) reverse_tail = temp;
             temp = temp.next;
-        }
-        temp.next = null;
-        return ans.next;
-    }
-    void reverse(int i,int j,ArrayList<Node> list){
-        while(i < j){
-            Node temp = list.get(i);
-            list.set(i,list.get(j));
-            list.set(j,temp);
             i++;
-            j--;
         }
+        reverse_tail.next = null;
+        Node new_rev = reverse(reverse_head);
+        reverse_head.next = last;
+        if(a != 1) {
+            first.next = new_rev;
+            return head;
+        }
+        return new_rev;
+    }
+    Node reverse(Node head){
+        if(head == null || head.next == null) return head;
+        Node p = head;
+        Node c = head;
+        Node f = head.next;
+        c.next = null;
+        while(f != null){
+            c = f;
+            f = f.next;
+            c.next = p;
+            p = c;
+        }
+        return c;
     }
 }
