@@ -41,4 +41,5 @@ Constraints:
 public class Pro_40{
     public static void main(String[] args) {
     }
+    
 }
