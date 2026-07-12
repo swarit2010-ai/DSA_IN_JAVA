@@ -22,7 +22,6 @@ public class Pro_48{
     public static void main(String[] args) {
     }
     public Node reverseCircular(Node head) {
-        // code here
         if(head.next == head) return head;
         Node temp = head;
         while(temp.next != head){
