@@ -53,4 +53,35 @@ The number of nodes in the list is in the range [2, 105].
 public class Pro_41{
     public static void main(String[] args) {
     }
+    public int[] nodesBetweenCriticalPoints(ListNode head) {
+        int[] ans = {-1,-1};
+        int idx = 1;
+        int fidx = -1;
+        int lidx = -1;
+        int minDistance = Integer.MAX_VALUE;
+        ListNode a = head;
+        ListNode b = a.next;
+        ListNode c = b.next;
+        if(c == null) return ans;
+        while(c != null){
+            if((b.val > a.val && b.val > c.val) || (b.val < a.val && b.val < c.val)){
+                if(fidx == -1) fidx = idx;
+                if(lidx != -1){
+                    int dis = idx-lidx;
+                    if(dis < minDistance) minDistance = dis;
+                }
+                lidx = idx;
+            }
+            idx++;
+            a = a.next;
+            b = b.next;
+            c = c.next;
+        }
+        int maxDistance = lidx-fidx;
+        if(maxDistance == 0) maxDistance = -1;
+        if(minDistance == Integer.MAX_VALUE) minDistance = -1;
+        ans[0] = minDistance;
+        ans[1] = maxDistance;
+        return ans;
+    }
 }

@@ -28,16 +28,28 @@ public class Pro_49{
     }
     public ListNode reverse(ListNode head) {
         // code here
+        // Three Pointers
+        // Node p = null;
+        // Node c = head;
+        // Node f = head;
+        // while(c != null){
+        //     f = c.next;
+        //     c.next = p;
+        //     c.prev = f;
+        //     p = c;
+        //     c = f;
+        // }
+        // return p;
+        // Two pointers
+        if(head.next == null) return head;
         ListNode p = null;
         ListNode c = head;
-        ListNode f = head;
         while(c != null){
-            f = c.next;
+            p = c.prev;
+            c.prev = c.next;
             c.next = p;
-            c.prev = f;
-            p = c;
-            c = f;
+            c = c.prev;
         }
-        return p;
+        return p.prev;
     }
 }

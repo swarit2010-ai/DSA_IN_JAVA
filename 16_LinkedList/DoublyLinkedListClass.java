@@ -2,6 +2,8 @@ class ListNode{
     int val;
     ListNode next;
     ListNode prev;
+    ListNode child;
+    ListNode random;
     ListNode(int val){
         this.val = val;
     }
