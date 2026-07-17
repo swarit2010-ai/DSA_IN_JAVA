@@ -39,4 +39,33 @@ The number of nodes in the list is in the range [0, 1000].
 public class Pro_42{
     public static void main(String[] args) {
     }
+    public ListNode[] splitListToParts(ListNode head, int k) {
+        int n = 0;
+        ListNode temp = head;
+        while(temp != null){
+            n++;
+            temp = temp.next;
+        }
+        int no = n/k;
+        int first = n%k;
+        int first_no = no+1;
+        temp = head;
+        int idx = 0;
+        int count = 0;
+        ListNode[] ans = new ListNode[k];
+        while(idx < k && temp != null){
+            if(idx < first) count = first_no;
+            else count = no;
+            ans[idx] = temp;
+            for(int j = 1;temp != null && j < count;j++) temp = temp.next;
+            if(temp.next != null){
+                ListNode node = temp.next;
+                temp.next = null;
+                temp = node;
+            }
+            else if(temp.next == null) temp = null;
+            idx++;
+        }
+        return ans;
+    }
 }

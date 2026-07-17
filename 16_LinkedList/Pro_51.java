@@ -16,4 +16,16 @@ Constraint:
 public class Pro_51{
     public static void main(String[] args) {
     }
+    ListNode removeDuplicates(ListNode head) {
+        // code here
+        ListNode t1 = head;
+        ListNode t2 = head;
+        while(t2 != null){
+            while(t2 != null && t1.val == t2.val) t2 = t2.next;
+            t1.next = t2;
+            if(t2 != null) t2.prev = t1;
+            t1 = t2;
+        }
+        return head;
+    }
 }

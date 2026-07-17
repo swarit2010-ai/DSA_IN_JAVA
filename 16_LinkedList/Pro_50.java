@@ -20,4 +20,25 @@ Constraints:
 public class Pro_50{
     public static void main(String[] args) {
     }
+    public ListNode rotateDLL(ListNode head, int k) {
+        // code here
+        if(head.next == null) return head;
+        int idx = 1;
+        ListNode temp = head;
+        ListNode connect = null;
+        int size = 1;
+        while(temp.next != null){
+            if(idx == k) connect = temp;
+            temp = temp.next;
+            idx++;
+            size++;
+        }
+        if(k >= size) return head;
+        temp.next = head;
+        head.prev = temp;
+        ListNode ans = connect.next;
+        ans.prev = null;
+        connect.next = null;
+        return ans;
+    }
 }
